@@ -31,3 +31,5 @@
 - check for case user presses multiple buttons
 - check for `C` button clearing the display
 - check user cannot directly enter value from keyboard.
+
+**Also incorporated pre merge check**
