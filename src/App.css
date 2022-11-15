@@ -56,10 +56,12 @@
   background: none;
   border-radius: 0.3rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 .dialerButton:hover {
   background-color: aliceblue;
+  transition: ease-in-out .4s;
 }
 
 .dialPad {
