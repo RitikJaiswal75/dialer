@@ -64,6 +64,13 @@
   transition: ease-in-out 0.4s;
 }
 
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  border: 1px solid gray;
+  color: gray;
+}
+
 .dialPad {
   padding-left: 1rem;
 }
