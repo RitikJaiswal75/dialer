@@ -1,4 +1,7 @@
 export default function animatedDisplay(value, onClick) {
+  if (!value) {
+    return;
+  }
   let count = 0;
   onClick("");
   let tempString = "";
