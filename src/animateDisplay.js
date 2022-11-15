@@ -2,7 +2,7 @@ export default function animatedDisplay(value, onClick) {
   let count = 0;
   onClick("");
   let tempString = "";
-  document.getElementsByTagName("button")[11].classList.add('disabled')
+  document.getElementsByTagName("button")[11].classList.add("disabled");
   let intervalID = setInterval(
     () => {
       const buttons = document.getElementsByTagName("button");
@@ -17,7 +17,7 @@ export default function animatedDisplay(value, onClick) {
       count++;
       if (count >= value.length) {
         clearInterval(intervalID);
-        buttons[11].classList.remove('disabled')
+        buttons[11].classList.remove("disabled");
       }
     },
     1000,
