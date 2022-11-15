@@ -22,6 +22,7 @@
 - Pressing `C` clears the display.
 - Pressing `R` will redial the existing number one by one by pressing on the number keys
 - In case the display is empty the `R` button will display the previous value
+- pass the query parameter `q` with the number you want to display by default
 
 ### What do the tests Check
 
@@ -31,3 +32,5 @@
 - check for case user presses multiple buttons
 - check for `C` button clearing the display
 - check user cannot directly enter value from keyboard.
+
+**Also incorporated pre merge check**

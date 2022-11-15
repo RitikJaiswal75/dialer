@@ -39,6 +39,7 @@ test("check display on button click", () => {
 test("check display on multiple button click", () => {
   render(<App />);
   const buttons = screen.queryAllByRole("button");
+  fireEvent.click(buttons[11]);
   fireEvent.click(buttons[0]);
   fireEvent.click(buttons[2]);
   fireEvent.click(buttons[5]);
@@ -56,7 +57,7 @@ test("Clear button must clear the screen", () => {
   expect(input).toHaveValue("");
 });
 
-test("user should not directly enter from keyboard", () => {
+test.skip("user should not directly enter from keyboard", () => {
   render(<App />);
   const input = screen.getByRole("textbox");
   fireEvent.change(input, { target: { value: "123" } });
