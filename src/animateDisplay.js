@@ -6,10 +6,9 @@ export default function animatedDisplay(value, onClick) {
     () => {
       const buttons = document.getElementsByTagName("button");
       for (let i = 0; i < buttons.length; i++) {
-        if (buttons[i].innerText == value[count]) {
+        buttons[i].classList.remove("red");
+        if (buttons[i].innerText === value[count]) {
           buttons[i].classList.add("red");
-        } else {
-          buttons[i].classList.remove("red");
         }
       }
       tempString += value[count];
