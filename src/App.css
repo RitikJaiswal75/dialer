@@ -61,7 +61,7 @@
 
 .dialerButton:hover {
   background-color: aliceblue;
-  transition: ease-in-out .4s;
+  transition: ease-in-out 0.4s;
 }
 
 .dialPad {
