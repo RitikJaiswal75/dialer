@@ -6,8 +6,8 @@ function paramsFilter() {
   let newParams = "";
   let params = new URLSearchParams(window.location.search);
   if (params.has("q")) {
-    for (let i = 0; i < params.get("q").length; i++) {
-      if (parseInt(params.get("q")[i])) {
+    for (let i = 0; i <= params.get("q").length; i++) {
+      if (parseInt(params.get("q")[i]) >= 0) {
         newParams += params.get("q")[i];
       }
     }
