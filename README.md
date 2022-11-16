@@ -23,6 +23,8 @@
 - Pressing `R` will redial the existing number one by one by pressing on the number keys
 - In case the display is empty the `R` button will display the previous value
 - pass the query parameter `q` with the number you want to display by default
+- To set the custom animation time you must enter the dev mode
+  - To enter the dev mode pass the query parameter as `dev=true`
 
 ### What do the tests Check
 
