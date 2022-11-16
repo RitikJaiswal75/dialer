@@ -44,7 +44,7 @@
   font-size: 2rem;
   text-align: center;
   border-radius: 0.3rem;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .dialerButton {
@@ -73,6 +73,22 @@
 
 .dialPad {
   padding-left: 1rem;
+}
+
+.time {
+  font-size: 1.5rem;
+}
+
+.animation-time-input {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.animation-time-input > input {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 4rem;
+  text-align: center;
 }
 
 @keyframes buttonAnimator {
