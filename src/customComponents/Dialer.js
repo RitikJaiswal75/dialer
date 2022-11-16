@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Display from "./Display";
 import DialPad from "./DialPad";
+import TimeInput from "./TimeInput";
 
 function paramsFilter() {
   let newParams = "";
@@ -17,11 +18,24 @@ function paramsFilter() {
 
 export default function Dialer(props) {
   const [content, setContent] = useState(paramsFilter);
-
+  const [animationTime, setAnimationTime] = useState(1000);
+  let params = new URLSearchParams(window.location.search);
+  let devMode;
+  if (params.has("dev")) {
+    devMode = params.get("dev");
+  }
   return (
     <>
+      {devMode === "true" ? (
+        <TimeInput value={animationTime} OnChange={setAnimationTime} />
+      ) : null}
+      <br />
       <Display value={content} />
-      <DialPad onClick={setContent} value={content} />
+      <DialPad
+        onClick={setContent}
+        value={content}
+        animationtime={animationTime}
+      />
     </>
   );
 }
