@@ -36,7 +36,6 @@ function clickAnimator(props, event) {
 }
 
 export default function DialerButton(props) {
-  console.log();
   return (
     <button
       className="dialerButton"
