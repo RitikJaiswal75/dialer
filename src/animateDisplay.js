@@ -1,4 +1,4 @@
-export default function animatedDisplay(value, onClick) {
+export default function animatedDisplay(value, onClick, animationTime) {
   if (!value) {
     return;
   }
@@ -11,10 +11,13 @@ export default function animatedDisplay(value, onClick) {
   }
   let intervalID = setInterval(
     () => {
+      //Show click animation on button
       for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("red");
+        buttons[i].style.animation = "none";
         if (buttons[i].innerText === value[count]) {
-          buttons[i].classList.add("red");
+          buttons[i].style.animation = `buttonAnimator ${
+            animationTime / 1000
+          }s`;
         }
       }
       tempString += value[count];
@@ -27,7 +30,7 @@ export default function animatedDisplay(value, onClick) {
         }
       }
     },
-    1000,
+    animationTime,
     count
   );
 }

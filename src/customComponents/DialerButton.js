@@ -5,27 +5,33 @@ function saveClearedValue(element) {
   element.onClick("");
 }
 
-function handleClearDisplay(props) {
+function handleRedial(props) {
   if (props.content) {
-    animatedDisplay(props.content, props.onClick);
+    animatedDisplay(props.content, props.onClick, props.animationtime);
   } else {
-    animatedDisplay(localStorage.getItem("previousValue"), props.onClick);
+    animatedDisplay(
+      localStorage.getItem("previousValue"),
+      props.onClick,
+      props.animationtime
+    );
   }
 }
 
 function clickAnimator(props, event) {
-  event.target.classList.add("red");
+  event.target.style.animation = `buttonAnimator ${
+    props.animationtime / 1000
+  }s`;
   setTimeout(
     () => {
-      event.target.classList.remove("red");
+      event.target.style.animation = "none";
     },
-    1000,
+    props.animationtime,
     event
   );
   props.value === "C"
     ? saveClearedValue(props)
     : props.value === "R"
-    ? handleClearDisplay(props)
+    ? handleRedial(props)
     : props.onClick(props.content + props.value);
 }
 
