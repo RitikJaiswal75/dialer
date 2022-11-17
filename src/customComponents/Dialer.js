@@ -4,6 +4,7 @@ import DialPad from "./DialPad";
 import TimeInput from "./TimeInput";
 import DisplayTime from "./DisplayTime";
 
+
 function paramsFilter() {
   let newParams = "";
   let params = new URLSearchParams(window.location.search);
