@@ -27,7 +27,6 @@
   - To enter the dev mode pass the query parameter as `dev=true`
 - Checkout the current time at the bottom of the dialer.
 
-
 ### What do the tests Check
 
 - Check for 12 buttons.
