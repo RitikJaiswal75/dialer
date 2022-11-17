@@ -25,6 +25,7 @@
 - pass the query parameter `q` with the number you want to display by default
 - To set the custom animation time you must enter the dev mode
   - To enter the dev mode pass the query parameter as `dev=true`
+- Checkout the current time at the bottom of the dialer.
 
 ### What do the tests Check
 
