@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Display from "./Display";
 import DialPad from "./DialPad";
 import TimeInput from "./TimeInput";
+import DisplayTime from "./DisplayTime";
 
 function paramsFilter() {
   let newParams = "";
@@ -36,6 +37,7 @@ export default function Dialer(props) {
         value={content}
         animationtime={animationTime}
       />
+      <DisplayTime time={props.currentTime} />
     </>
   );
 }
